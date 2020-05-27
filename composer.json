@@ -9,7 +9,11 @@
       "email": "1728215+Gabrola@users.noreply.github.com"
     }
   ],
+  "require": {
+    "php": ">=5.4"
+  },
   "require-dev": {
+    "php": ">=5.5",
     "phpunit/phpunit": "9.1.4"
   },
   "autoload": {

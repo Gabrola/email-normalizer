@@ -5,6 +5,7 @@
  */
 
 use Gabrola\EmailNormalizer\EmailNormalizer;
+use Gabrola\EmailNormalizer\EmailRules;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -20,10 +21,13 @@ class EmailNormalizerTest extends TestCase
      */
     public function testNormalize($email, $expected)
     {
-        $emailNormalizer = new EmailNormalizer();
+        $emailNormalizer = new EmailNormalizer(new EmailRules());
         $this->assertEquals($expected, $emailNormalizer->normalize($email));
     }
 
+    /**
+     * @return Generator
+     */
     public function provideDataToTestNormalize()
     {
         yield ['test@example.com', 'test@example.com'];
@@ -35,5 +39,11 @@ class EmailNormalizerTest extends TestCase
         yield ['t.e.s.t+rand.om@google.mail.com', 't.e.s.t+rand.om@google.mail.com'];
         yield ['test+random@hotmail.com', 'test@hotmail.com'];
         yield ['te.st+random@hotmail.com', 'te.st@hotmail.com'];
+        yield ['test+whatever@yahoo.com', 'test+whatever@yahoo.com'];
+        yield ['test-whatever@yahoo.com', 'test@yahoo.com'];
+        yield ['whatever@test.fastmail.com', 'test@fastmail.com'];
+        yield ['whatever+random@test.fastmail.com', 'test@fastmail.com'];
+        yield ['whatever@invalid.test.fastmail.com', 'whatever@invalid.test.fastmail.com'];
+        yield ['test+random@fastmail.com', 'test@fastmail.com'];
     }
 }
