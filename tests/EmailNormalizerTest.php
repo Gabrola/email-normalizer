@@ -4,8 +4,11 @@
  * @copyright Copyright 2020 Youssef Gaber
  */
 
+namespace Gabrola\EmailNormalizer\Tests;
+
 use Gabrola\EmailNormalizer\EmailNormalizer;
-use Gabrola\EmailNormalizer\EmailRules;
+use Gabrola\EmailNormalizer\Tests\Stubs\TestRules;
+use Generator;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -21,7 +24,7 @@ class EmailNormalizerTest extends TestCase
      */
     public function testNormalize($email, $expected)
     {
-        $emailNormalizer = new EmailNormalizer(new EmailRules());
+        $emailNormalizer = new EmailNormalizer(new TestRules());
         $this->assertEquals($expected, $emailNormalizer->normalize($email));
     }
 
@@ -30,6 +33,8 @@ class EmailNormalizerTest extends TestCase
      */
     public function provideDataToTestNormalize()
     {
+        yield ['invalid email', null];
+
         yield ['test@example.com', 'test@example.com'];
         yield ['test+random@example.com', 'test+random@example.com'];
         yield ['te.st+random@example.com', 'te.st+random@example.com'];
@@ -45,5 +50,12 @@ class EmailNormalizerTest extends TestCase
         yield ['whatever+random@test.fastmail.com', 'test@fastmail.com'];
         yield ['whatever@invalid.test.fastmail.com', 'whatever@invalid.test.fastmail.com'];
         yield ['test+random@fastmail.com', 'test@fastmail.com'];
+
+        yield ['us.er.na.me+whatever@plusdots.test', 'username@plusdots.test'];
+        yield ['us.er.na.me-whatever@hyphendots.test', 'username@hyphendots.test'];
+        yield ['us.er.na.me+whatever@plus.test', 'us.er.na.me@plus.test'];
+        yield ['us.er.na.me-whatever@hyphen.test', 'us.er.na.me@hyphen.test'];
+        yield ['us.er.na.me+whatever@dots.test', 'username+whatever@dots.test'];
+        yield ['wh.at+ever@username.subdomain.test', 'username@subdomain.test'];
     }
 }

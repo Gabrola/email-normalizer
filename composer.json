@@ -10,10 +10,10 @@
     }
   ],
   "require": {
-    "php": ">=5.4"
+    "php": ">=5.6"
   },
   "require-dev": {
-    "php": ">=5.5",
+    "php": ">=5.6",
     "phpunit/phpunit": "9.1.4"
   },
   "autoload": {
@@ -22,7 +22,7 @@
     }
   },
   "autoload-dev": {
-    "psr-0": {
+    "psr-4": {
       "Gabrola\\EmailNormalizer\\Tests\\": "tests/"
     }
   }

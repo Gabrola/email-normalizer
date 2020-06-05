@@ -9,3 +9,4 @@ composer.phar
 
 .idea
 .phpunit.result.cache
+/build

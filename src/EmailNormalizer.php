@@ -85,11 +85,6 @@ class EmailNormalizer
         }
 
         $atPosition = strrpos($email, '@');
-
-        if ($atPosition === false) {
-            return null;
-        }
-
         $username = substr($email, 0, $atPosition);
         $domain   = substr($email, $atPosition + 1);
 
