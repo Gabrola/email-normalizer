@@ -39,3 +39,4 @@ echo $normalizedEmail; //Returns username@gmail.com
  - Yahoo
  - Fastmail
  - Apple iCloud
+ - Yandex
