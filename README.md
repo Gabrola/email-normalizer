@@ -1,5 +1,5 @@
 # Email Normalizer
-This library that will normalize email addresses for cases when different email addresses all point towards a single email account.
+This library will normalize email addresses for cases when different email addresses all point towards a single email account.
 For example `user.name+whatever@gmail.com` points to `username@gmail.com`.
 This is useful for cases such as when you want to limit a single user using a single email account to signup using different email addresses.
 
