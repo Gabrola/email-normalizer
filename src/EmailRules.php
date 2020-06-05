@@ -8,6 +8,7 @@ namespace Gabrola\EmailNormalizer;
 
 use Gabrola\EmailNormalizer\Providers\Fastmail;
 use Gabrola\EmailNormalizer\Providers\Google;
+use Gabrola\EmailNormalizer\Providers\ICloud;
 use Gabrola\EmailNormalizer\Providers\Outlook;
 use Gabrola\EmailNormalizer\Providers\Yahoo;
 
@@ -31,7 +32,8 @@ class EmailRules implements EmailRulesInterface
             new Google(),
             new Outlook(),
             new Yahoo(),
-            new Fastmail()
+            new Fastmail(),
+            new ICloud()
         ];
     }
 

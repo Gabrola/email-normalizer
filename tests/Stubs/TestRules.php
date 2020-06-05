@@ -9,11 +9,6 @@ namespace Gabrola\EmailNormalizer\Tests\Stubs;
 use Gabrola\EmailNormalizer\EmailNormalizer;
 use Gabrola\EmailNormalizer\EmailRules;
 
-/**
- * @author Youssef Gaber <1728215+Gabrola@users.noreply.github.com>
- * @copyright Copyright 2020 Youssef Gaber
- */
-
 class TestRules extends EmailRules
 {
     public function getRules()
