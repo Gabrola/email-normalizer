@@ -40,3 +40,4 @@ echo $normalizedEmail; //Returns username@gmail.com
  - Fastmail
  - Apple iCloud
  - Yandex
+ - Mail.ru
