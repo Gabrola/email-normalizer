@@ -41,3 +41,4 @@ echo $normalizedEmail; //Returns username@gmail.com
  - Apple iCloud
  - Yandex
  - Mail.ru
+ - ProtonMail

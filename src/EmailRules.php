@@ -11,6 +11,7 @@ use Gabrola\EmailNormalizer\Providers\Google;
 use Gabrola\EmailNormalizer\Providers\ICloud;
 use Gabrola\EmailNormalizer\Providers\MailRu;
 use Gabrola\EmailNormalizer\Providers\Outlook;
+use Gabrola\EmailNormalizer\Providers\ProtonMail;
 use Gabrola\EmailNormalizer\Providers\Yahoo;
 use Gabrola\EmailNormalizer\Providers\Yandex;
 
@@ -37,7 +38,8 @@ class EmailRules implements EmailRulesInterface
             new Fastmail(),
             new ICloud(),
             new Yandex(),
-            new MailRu()
+            new MailRu(),
+            new ProtonMail()
         ];
     }
 
