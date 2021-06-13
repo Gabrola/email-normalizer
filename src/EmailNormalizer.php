@@ -86,7 +86,7 @@ class EmailNormalizer
 
         $atPosition = strrpos($email, '@');
         $username = substr($email, 0, $atPosition);
-        $domain   = substr($email, $atPosition + 1);
+        $domain   = strtolower(substr($email, $atPosition + 1));
 
         $domainParts = explode('.', $domain);
         $topDomain   = null;
