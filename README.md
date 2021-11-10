@@ -3,8 +3,9 @@ This library will normalize email addresses for cases when different email addre
 For example `user.name+whatever@gmail.com` points to `username@gmail.com`.
 This is useful for cases such as when you want to limit a single user using a single email account to signup using different email addresses.
 
-![Packagist Version](https://img.shields.io/packagist/v/Gabrola/email-normalizer)
-![Codecov](https://img.shields.io/codecov/c/github/Gabrola/email-normalizer)
+[![Packagist Version](https://img.shields.io/packagist/v/Gabrola/email-normalizer)](https://packagist.org/packages/gabrola/email-normalizer)
+[![Packagist Downloads](https://img.shields.io/packagist/dt/Gabrola/email-normalizer)](https://packagist.org/packages/gabrola/email-normalizer)
+[![Codecov](https://img.shields.io/codecov/c/github/Gabrola/email-normalizer)](https://app.codecov.io/gh/Gabrola/email-normalizer)
 [![GitHub license](https://img.shields.io/github/license/Gabrola/email-normalizer)](https://github.com/Gabrola/email-normalizer/blob/master/LICENSE)
 
 ### Installation
