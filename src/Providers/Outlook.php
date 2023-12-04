@@ -22,7 +22,7 @@ class Outlook implements EmailRulesInterface
     {
         return [
             'live.com'        => [
-                'rules' => EmailNormalizer::PLUS_TAG | EmailNormalizer::USERNAME_DOTS
+                'rules' => EmailNormalizer::PLUS_TAG
             ],
             'hotmail.com'     => [
                 'rules' => EmailNormalizer::PLUS_TAG
